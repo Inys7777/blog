@@ -39,4 +39,5 @@ function App() {
   );
 }
 // 자바스크립트에서 -는 진짜 빼기를 뜻한다.
+// state는 언제 쓰나? -> 자동으로 html에 반영되게 하고 싶으면
 export default App;
