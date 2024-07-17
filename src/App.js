@@ -63,9 +63,21 @@ let [따봉, 따봉변경] = useState(0);
         copy.sort();
         제목변경(copy);
       }}>가나다순정렬</button>
-      
+
+      <Modal/>
+
     </div>
   );
+}
+
+function Modal(){
+  return (
+    <div className='modal'>
+      <h4>제목</h4>
+      <p>날짜</p>
+      <p>상세내용</p>
+    </div>
+  )
 }
 // 자바스크립트에서 -는 진짜 빼기를 뜻한다.
 // state는 언제 쓰나? -> 자동으로 html에 반영되게 하고 싶으면
