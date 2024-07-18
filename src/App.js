@@ -29,6 +29,7 @@ function App() {
 }  항상 onClick 안에는 함수가 들어가야 한다. */
 
 let [따봉, 따봉변경] = useState(0);
+let [modal, setModal] = useState(false); // set+a로 짓는 것이 관례
   return (
     <div className="App">
       <div className='black-nav'>
@@ -45,7 +46,7 @@ let [따봉, 따봉변경] = useState(0);
         <p>{ publishDate }</p>
       </div>
       <div className='list'>
-        <h4>{ 글제목[2] }</h4>
+        <h4 onClick={() => {setModal(!modal)}}>{ 글제목[2] }</h4>
         <p>{ publishDate }</p>
       </div>
       <button onClick={() => { 
@@ -64,7 +65,11 @@ let [따봉, 따봉변경] = useState(0);
         제목변경(copy);
       }}>가나다순정렬</button>
 
-      <Modal/>
+      {
+        //조건식 ? 참일때 실행할 코드 : 거짓일 때 실행할 코드
+        // 1 == 2? '맞음' : '아님'
+        modal == true ? <Modal/> : null
+      }
 
     </div>
   );
